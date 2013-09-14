@@ -1,0 +1,2 @@
+rake resque:work QUEUE='*' &
+
