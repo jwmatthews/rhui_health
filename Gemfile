@@ -46,3 +46,9 @@ gem "figaro", ">= 0.5.3"
 
 # To use debugger
 # gem 'debugger'
+#
+group :assets do
+  gem 'less-rails-bootstrap'
+end
+gem 'therubyracer'
+
