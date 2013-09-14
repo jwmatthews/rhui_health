@@ -21,3 +21,6 @@ doc/
 db/development.sqlite3
 log/*
 
+
+# Ignore application configuration
+/config/application.yml
