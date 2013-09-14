@@ -1,4 +1,13 @@
 RhuiHealth::Application.routes.draw do
+  resources :cds
+
+
+  resources :rhuas
+
+
+  resources :aws_regions
+
+
   mount Resque::Server, :at => "/resque"
 
   # The priority is based upon order of creation:
