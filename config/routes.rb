@@ -1,6 +1,4 @@
 RhuiHealth::Application.routes.draw do
-  resources :cds
-  resources :rhuas
   resources :aws_regions
   resources :home
 
