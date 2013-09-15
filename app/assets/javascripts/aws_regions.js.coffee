@@ -12,5 +12,5 @@ $ ->
         error: (jqXHR, textStatus, errorThrown) ->
             $('#aws_forum_sync_status').text "AJAX Error: #{textStatus}"
         success: (data, textStatus, jqXHR) ->
-            $('#aws_forum_sync_status').text "Successful AJAX call: #{data}"
+            $('#aws_forum_sync_status').text "Successful AJAX call: #{JSON.stringify(data)}"
 

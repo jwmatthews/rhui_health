@@ -4,6 +4,24 @@
   <b>Name:</b>
   <%= @aws_region.name %>
 </p>
+<p>
+  <b>Description:</b>
+  <%= @aws_region.description %>
+</p>
+<p>
+  <b> Last Check:</b>
+  <%= @aws_region.last_aws_forum_check.strftime("%B %d at %I:%M %p") %>
+</p>
+<p>
+  <b> Last Post: </b>
+  <%= @aws_region.last_aws_forum_post.strftime("%B %d at %I:%M %p") %>
+</p>
+<p>
+  <b>IP Ranges:</b>
+  <% @aws_region.ip_ranges.each do |r| %>
+    </br><%= r %>
+  <% end %>
+</p>
 
 
 <%= link_to 'Edit', edit_aws_region_path(@aws_region) %> |

@@ -16,14 +16,9 @@
 
 <% @aws_regions.each do |aws_region| %>
   <tr>
-    <td><%= aws_region.name %></td>
-    <td><%= link_to 'Show', aws_region %></td>
-    <td><%= link_to 'Edit', edit_aws_region_path(aws_region) %></td>
-    <td><%= link_to 'Destroy', aws_region, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to aws_region.name, aws_region %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Aws region', new_aws_region_path %>
