@@ -11,12 +11,24 @@ describe AWSForum::RegionIPs do
     end
   end
 
+  describe "posted_on" do
+    it "should be able to parse the date the announcement was posted" do
+      @region_ips.posted_on.should_not be(nil)
+    end
+  end
+
   describe "lookup" do
     it "should be able to parse the Amazon Forum parse and return an array of IP Ranges" do
-      expected = ["72.44.32.0/19", "67.202.0.0/18", "75.101.128.0/17", "174.129.0.0/16"]
+      expected_keys = @region_ips.known_regions.keys
       found = @region_ips.lookup
+      # Ensure we have entries for each of the known regions
+      expected_keys.each do |x|
+        found.keys.should include (x)
+      end
+      # Check a few of the values line up to what we expect
+      expected = ["72.44.32.0/19", "67.202.0.0/18", "75.101.128.0/17", "174.129.0.0/16"]      
       expected.each do |x|
-        found.should include(x)
+        found["us-east-1"].should include(x)
       end
     end
   end
