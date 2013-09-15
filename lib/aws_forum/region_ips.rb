@@ -33,7 +33,8 @@ module AWSForum
           break
         end
       end
-      posted_on_date
+      # Example:  Sep 5, 2013 4:14 PM
+      DateTime.strptime(posted_on_date, "%b %e, %Y %l:%M %p")
     end
 
     def lookup

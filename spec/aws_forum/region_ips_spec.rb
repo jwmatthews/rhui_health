@@ -23,7 +23,7 @@ describe AWSForum::RegionIPs do
       found = @region_ips.lookup
       # Ensure we have entries for each of the known regions
       expected_keys.each do |x|
-        found.keys.should include (x)
+        found.keys.should include(x)
       end
       # Check a few of the values line up to what we expect
       expected = ["72.44.32.0/19", "67.202.0.0/18", "75.101.128.0/17", "174.129.0.0/16"]      

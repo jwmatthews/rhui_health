@@ -23,5 +23,8 @@ def parse()
   posted_on
 end
 
-puts "Posted on date is: '#{parse}'"
+posted_on = parse
+puts "Posted on date is: '#{posted_on}'"
+posted_on_date = DateTime.strptime(posted_on, "%b %e, %Y %l:%M %p")
+puts "Converted to DateTime: #{posted_on_date}"
 
