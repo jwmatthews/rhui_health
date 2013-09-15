@@ -1,4 +1,6 @@
 RhuiHealth::Application.routes.draw do
+  put "tasks/sync_aws_forum_ip_ranges"
+
   resources :aws_regions
   resources :home
 

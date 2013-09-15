@@ -1,3 +1,5 @@
+require 'aws_forum'
+
 class CheckAWSRegionIpRanges
   attr_accessor :posted_on, :regions, :region_descriptions
 
