@@ -1,0 +1,31 @@
+<h1>Listing instances</h1>
+
+<table>
+  <tr>
+    <th>Role</th>
+    <th>Region</th>
+    <th>Hostname</th>
+    <th>Ec2 public hostname</th>
+    <th>Ssh key</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @instances.each do |instance| %>
+  <tr>
+    <td><%= instance.role %></td>
+    <td><%= instance.region %></td>
+    <td><%= instance.hostname %></td>
+    <td><%= instance.ec2_public_hostname %></td>
+    <td><%= instance.ssh_key %></td>
+    <td><%= link_to 'Show', instance %></td>
+    <td><%= link_to 'Edit', edit_instance_path(instance) %></td>
+    <td><%= link_to 'Destroy', instance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Instance', new_instance_path %>

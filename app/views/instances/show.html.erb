@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Role:</b>
+  <%= @instance.role %>
+</p>
+
+<p>
+  <b>Region:</b>
+  <%= @instance.region %>
+</p>
+
+<p>
+  <b>Hostname:</b>
+  <%= @instance.hostname %>
+</p>
+
+<p>
+  <b>Ec2 public hostname:</b>
+  <%= @instance.ec2_public_hostname %>
+</p>
+
+<p>
+  <b>Ssh key:</b>
+  <%= @instance.ssh_key %>
+</p>
+
+
+<%= link_to 'Edit', edit_instance_path(@instance) %> |
+<%= link_to 'Back', instances_path %>
